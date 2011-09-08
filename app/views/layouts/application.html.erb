@@ -7,8 +7,21 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
-
+    <div id="header-background">
+        <div id="header">
+            <a href="<%= root_path %>"><img src="/images/logo.png" style="float:left;"/></a>
+            <div id="header-links">
+                <%= link_to "Projects", "" %>   
+            </div>      
+        </div> 
+    </div> 
+    <div id="main">  
+        <%= yield %>
+        <div class="push"></div>
+    </div>      
 </body>
+
+<div id="footer">
+</div>
+
 </html>
