@@ -1,5 +1,25 @@
-<p style="font-size:20px;text-align:center;"><b>IMG is a University of Pennsylvania tech startup community that meets regularly to develop innovative products and businesses.</b></p> 
+<h1 style="font-size:25px;text-align:center;"><b>IMG is a University of Pennsylvania tech startup community that meets regularly to develop innovative products and businesses that aim to make a broad impact.</b></h1><br />
 
-<p>Our members live and breathe entrepreneurship and technology. We look for painpoints in life that can be adressed by blah blah blah. If you are interested in helping IMG grow its vision please</p>
+<p style="font-size:15px;color:#004782;">Our members live and breathe entrepreneurship and technology. We look for pain points in life that can be addressed by blah blah blah. If you are interested in helping IMG grow its vision please</p><br />
 
-<p style="font-size:20px;"><b>Sign up here:</b></p>
+<%= content_tag(:p, notice, :class => 'notice') if notice.present? %>
+<%= content_tag(:p, alert, :class => 'alert') if alert.present? %>
+
+<p style="font-size:20px;float:left;margin-right:10px;color:#004782;"><b>Sign up here:</b></p>
+
+<%= form_for @email, :url => emails_path, :class => "email-form" do |f| %>
+	<%= f.text_field :email %>
+	<%= f.submit "Submit" %>
+<% end %>
+
+<div id="projects-div">
+	<% @users.each do |user| %>
+	    <div class="project-frame">
+		    <a href="<%= user.project_dest %>"><img class="center" src="<%= user.project %>" /></a>
+		    <div class="project-info">
+		        <div class="text"><b><%= user.project_name %></b> by </div>
+		        <div class="gravatar"><a href="<% user.gravatar_dest %>"><img title="<%= user.name %>" src="<%= user.gravatar %>" /></a></div>
+		    </div>
+		</div>
+	<% end %>
+</div>		

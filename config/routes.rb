@@ -1,5 +1,5 @@
 Img::Application.routes.draw do
-  get "users/index"
-
   root :to => "users#index"
+  get "users/index"
+  resources :emails
 end

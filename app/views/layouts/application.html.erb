@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Img</title>
+  <title>IMG</title>
   <%= stylesheet_link_tag :all %>
+  <link href='http://fonts.googleapis.com/css?family=Buda:300' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
@@ -11,7 +12,10 @@
         <div id="header">
             <a href="<%= root_path %>"><img src="/images/logo.png" style="float:left;"/></a>
             <div id="header-links">
-                <%= link_to "Projects", "" %>   
+                <%= link_to "Projects", "" %> |
+                <%= link_to "Members", "" %> |
+                <%= link_to "Schedule", "" %> |
+                <%= link_to "Contact"%>   
             </div>      
         </div> 
     </div> 
