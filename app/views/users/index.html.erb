@@ -13,12 +13,13 @@
 <% end %>
 
 <div id="projects-div">
+	<h1 style="font-size 25px;margin-bottom:10px;">IMG Projects and Businesses</h1>
 	<% @users.each do |user| %>
 	    <div class="project-frame">
 		    <a href="<%= user.project_dest %>"><img class="center" src="<%= user.project %>" /></a>
 		    <div class="project-info">
 		        <div class="text"><b><%= user.project_name %></b> by </div>
-		        <div class="gravatar"><a href="<% user.gravatar_dest %>"><img title="<%= user.name %>" src="<%= user.gravatar %>" /></a></div>
+		        <div class="gravatar"><a href="<% user.gravatar_dest %>"><img class="gravatar-image" title="<%= user.name %>" src="<%= user.gravatar %>" /></a></div>
 		    </div>
 		</div>
 	<% end %>

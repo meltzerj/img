@@ -5,7 +5,7 @@
   <%= stylesheet_link_tag :all %>
   <link href='http://fonts.googleapis.com/css?family=Buda:300' rel='stylesheet' type='text/css'>
   <%= favicon_link_tag %>
-  <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js','application', 'jquery.scrollTo' %>
+  <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js','application', 'jquery.tipsy', 'jquery.scrollTo' %>
   <%= csrf_meta_tag %>
 </head>
 <body>
@@ -14,7 +14,7 @@
             <a href="<%= root_path %>"><img src="/images/logo.png" style="float:left;"/></a>
             <div id="header-links">
                 <%= link_to "Projects", "", :id => "projects-link" %> |
-                <%= link_to "Members", "" %> |
+                <%= link_to "Mission", "" %> |
                 <%= link_to "Schedule", "" %> |
                 <%= link_to "Contact"%>   
             </div>      

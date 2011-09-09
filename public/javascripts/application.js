@@ -6,7 +6,7 @@ $(document).ready(function() {
         $.scrollTo({top:position.top,left:0}, 500);
     })
     
-    
+    $('.gravatar-image').tipsy({gravity: 'w'});
 
     $('[placeholder]').focus(function() {
       var input = $(this);

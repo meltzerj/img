@@ -21,6 +21,27 @@ class UsersController < ApplicationController
         flash[:alert] = "There was an error. Please try again."
       end
     end    
-  end    
+  end
+  
+  def go_to_edit
+    @user = User.find_by_name(params[:name])
+    redirect_to edit_user_path(@user)
+  end  
+  
+  def edit
+    @user = User.find(params[:id])
+  end 
+  
+  def update
+    @user = User.find(params[:id])
+      respond_to do |format|
+        if @user.update_attributes(params[:user])
+          format.html { redirect_to :back }
+          flash[:notice] = "Information successfully updated."
+        else
+          format.html { render :action => "edit" }
+        end
+      end
+  end     
 
 end

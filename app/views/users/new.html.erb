@@ -1,14 +1,25 @@
-<%= content_tag(:p, notice, :class => 'notice') if notice.present? %>
-<%= content_tag(:p, alert, :class => 'alert') if alert.present? %><br />
+<div class="left">
 
-<p>Add yourself to IMG's website by filling in the criteria below. <b>All URL's must prepend "http://"</b>.</p><br />
+	<%= content_tag(:p, notice, :class => 'notice') if notice.present? %>
+	<%= content_tag(:p, alert, :class => 'alert') if alert.present? %><br />
 
-<%= form_for @user do |f| %>
-	<%= f.text_field :name, :placeholder => "Full Name", :class => "add-field" %><br />
-	<%= f.text_field :gravatar, :placeholder => "Url of gravatar (50x50 pixels), I recommend using gravatar.com", :class => "add-field" %><br />
-	<%= f.text_field :gravatar_dest, :placeholder => "Url where gravatar links to (ex. personal site, twitter)", :class => "add-field" %><br />
-	<%= f.text_field :project_name, :placeholder => "Project/Website Name", :class => "add-field" %><br />
-	<%= f.text_field :project, :placeholder => "Url of screenshot or logo of project (300x200 pixels)", :class => "add-field" %><br />
-	<%= f.text_field :project_dest, :placeholder => "Url of project", :class => "add-field" %><br />
-    <%= f.submit "Add yourself", :id => "add-button" %>
-<% end %>
+	<p>Add yourself to IMG's website. <b>All URL's must prepend "http://"</b>.</p><br />
+
+	<%= form_for @user do |f| %>
+		<%= f.text_field :name, :placeholder => "Full Name", :class => "add-field" %><br />
+		<%= f.text_field :gravatar, :placeholder => "Url of gravatar (50x50 pixels), I recommend using gravatar.com", :class => "add-field" %><br />
+		<%= f.text_field :gravatar_dest, :placeholder => "Url where gravatar links to (ex. personal site, twitter)", :class => "add-field" %><br />
+		<%= f.text_field :project_name, :placeholder => "Project/Website Name", :class => "add-field" %><br />
+		<%= f.text_field :project, :placeholder => "Url of screenshot or logo of project (300x200 pixels)", :class => "add-field" %><br />
+		<%= f.text_field :project_dest, :placeholder => "Url of project", :class => "add-field" %><br />
+	    <%= f.submit "Add yourself", :id => "add-button" %>
+	<% end %>
+
+</div>
+<div class="right">
+	<p style="margin-top:25px;margin-bottom:10px;"> Edit your information by submitting your name exactly as you first entered it.</p>
+	<%= form_tag :go_to_edit, :controller => 'user', :action => 'go_to_edit' do %>
+	    <%= text_field_tag :name, nil, :placeholder => "Full Name", :class => "field" %>
+	    <%= submit_tag "Edit" %>
+	<% end %>
+</div>	

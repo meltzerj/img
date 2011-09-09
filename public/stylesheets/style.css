@@ -49,6 +49,8 @@ h1 {
 
 #header-links{
     float: right;
+    font-family: 'Buda', sans-serif;
+    font-size: 25px;
 }
 
 #footer {
@@ -86,10 +88,22 @@ a:hover{
     text-decoration: underline;
 }
 
+.left {
+    float:left;
+    width:55%;
+    margin-bottom:50px;
+}
+
+.right {
+    float:left;
+    width:40%;
+}
+
 #projects-div {
-    margin-top: 20px;
+    margin-top: 50px;
     clear:both;
     overflow:auto;
+    padding-top: 20px;
     padding-bottom: 10px;
 }
 
