@@ -2,14 +2,14 @@
   margin: 0 auto;
 }
 
-#main, #header, #footer{
-  width: 980px;
+#main, #header, #footer-container{
+  width: 1024px;
   clear: both;
 }
 
 #main{
     margin: 0 auto;
-    height: 70%;
+    clear:both;
 }
 
 img {border: none;
@@ -52,17 +52,19 @@ h1 {
 }
 
 #footer {
-    margin: 0 auto -142px;
     width: 100%;
     background-color: #004782;
     -moz-box-shadow: 0px -5px 5px #888;
     -webkit-box-shadow: 0px -5px 5px #888;
     box-shadow: 0px -5px 5px #888;
-    margin-top: 20px;
+    margin-top: 100px;
+    height: 150px;
+    clear:both;
 }
 
-#footer, .push{
-    height: 150px;
+.push{
+    clear:both;
+    height:50px;
 }
 
 .notice {
@@ -86,6 +88,9 @@ a:hover{
 
 #projects-div {
     margin-top: 20px;
+    clear:both;
+    overflow:auto;
+    padding-bottom: 10px;
 }
 
 .project-frame {
@@ -94,7 +99,8 @@ a:hover{
     float: left;
     margin-right: 20px;
     margin-top: 20px;
-    display: block;   
+    padding-bottom: 10px;
+    display: inline-block;   
     -moz-box-shadow: 3px 3px 5px #888;
     -webkit-box-shadow: 3px 3px 5px #888;
     box-shadow: 3px 3px 5px #888;
@@ -125,7 +131,6 @@ img.center {
 }
 
 form input[type="text"] {
-    width: 270px;
     height: 25px;
     -moz-border-radius: 7px;
     -webkit-border-radius: 7px;
@@ -136,7 +141,6 @@ form input[type="text"] {
     border: 1px solid #ccc;
     font-size: 15px;
     padding: 2px 7px;
-    color: #004782;
 }
 
 form input[type="text"]:focus {
@@ -165,8 +169,55 @@ form input[type="submit"] {
     
 }
 
+form input[type="submit"]:hover {
+    cursor:pointer;
+}
+
 form input[type="submit"]:active {
     border:none;
     background: #66101d;
     border-top: #510b15;
+}
+
+#add-button{
+    width:90px;
+    margin-left:425px;
+}
+
+.field{
+    width: 270px;
+    color: #004782;
+}
+
+.add-field {
+    width: 500px;
+    margin-bottom:10px;
+    color: #004782;
+}
+
+.placeholder{
+    color: #ccc;
+}
+
+#facebook{
+    display: block;
+    float: left;
+    width: 37px;
+    height: 37px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    background: white url(../images/fb.png) 50% 50% no-repeat;
+    margin-right: 10px;
+}
+
+#twitter{
+    display: block;
+    float: left;
+    width: 37px;
+    height: 37px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    background: white url(../images/twitter.png) 50% 50% no-repeat;
 }

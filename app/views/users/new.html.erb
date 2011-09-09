@@ -1,0 +1,14 @@
+<%= content_tag(:p, notice, :class => 'notice') if notice.present? %>
+<%= content_tag(:p, alert, :class => 'alert') if alert.present? %><br />
+
+<p>Add yourself to IMG's website by filling in the criteria below. <b>All URL's must prepend "http://"</b>.</p><br />
+
+<%= form_for @user do |f| %>
+	<%= f.text_field :name, :placeholder => "Full Name", :class => "add-field" %><br />
+	<%= f.text_field :gravatar, :placeholder => "Url of gravatar (50x50 pixels), I recommend using gravatar.com", :class => "add-field" %><br />
+	<%= f.text_field :gravatar_dest, :placeholder => "Url where gravatar links to (ex. personal site, twitter)", :class => "add-field" %><br />
+	<%= f.text_field :project_name, :placeholder => "Project/Website Name", :class => "add-field" %><br />
+	<%= f.text_field :project, :placeholder => "Url of screenshot or logo of project (300x200 pixels)", :class => "add-field" %><br />
+	<%= f.text_field :project_dest, :placeholder => "Url of project", :class => "add-field" %><br />
+    <%= f.submit "Add yourself", :id => "add-button" %>
+<% end %>

@@ -4,7 +4,8 @@
   <title>IMG</title>
   <%= stylesheet_link_tag :all %>
   <link href='http://fonts.googleapis.com/css?family=Buda:300' rel='stylesheet' type='text/css'>
-  <%= javascript_include_tag :defaults %>
+  <%= favicon_link_tag %>
+  <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js','application', 'jquery.scrollTo' %>
   <%= csrf_meta_tag %>
 </head>
 <body>
@@ -12,7 +13,7 @@
         <div id="header">
             <a href="<%= root_path %>"><img src="/images/logo.png" style="float:left;"/></a>
             <div id="header-links">
-                <%= link_to "Projects", "" %> |
+                <%= link_to "Projects", "", :id => "projects-link" %> |
                 <%= link_to "Members", "" %> |
                 <%= link_to "Schedule", "" %> |
                 <%= link_to "Contact"%>   
@@ -21,11 +22,18 @@
     </div> 
     <div id="main">  
         <%= yield %>
-        <div class="push"></div>
-    </div>      
-</body>
+    </div>
+    <div id="push"></div>      
+    <div id="footer">
+        <div id="footer-container">
+            <div style="color:white;float:right;margin-top:20px;">Interactive Media Group © 2011</div>
+            <div style="float:left;margin-top:20px;">
+                <a href=""><span id="facebook"></span></a>
+                <a href=""><span id="twitter"></span></a>
+            </div>    
+        </div>
+    </div>
 
-<div id="footer">
-</div>
+</body>
 
 </html>

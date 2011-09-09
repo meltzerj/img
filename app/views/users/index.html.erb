@@ -1,6 +1,6 @@
 <h1 style="font-size:25px;text-align:center;"><b>IMG is a University of Pennsylvania tech startup community that meets regularly to develop innovative products and businesses that aim to make a broad impact.</b></h1><br />
 
-<p style="font-size:15px;color:#004782;">Our members live and breathe entrepreneurship and technology. We look for pain points in life that can be addressed by blah blah blah. If you are interested in helping IMG grow its vision please</p><br />
+<p style="font-size:15px;color:#004782;">Our members live and breathe entrepreneurship. They worship technology. We look for pain points in life that can be addressed by blah blah blah. If you are interested in helping IMG grow its vision please</p><br />
 
 <%= content_tag(:p, notice, :class => 'notice') if notice.present? %>
 <%= content_tag(:p, alert, :class => 'alert') if alert.present? %>
@@ -8,7 +8,7 @@
 <p style="font-size:20px;float:left;margin-right:10px;color:#004782;"><b>Sign up here:</b></p>
 
 <%= form_for @email, :url => emails_path, :class => "email-form" do |f| %>
-	<%= f.text_field :email %>
+	<%= f.text_field :email, :placeholder => "email address", :class => "field" %>
 	<%= f.submit "Submit" %>
 <% end %>
 
