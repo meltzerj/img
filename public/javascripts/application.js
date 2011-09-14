@@ -22,7 +22,7 @@ $(document).ready(function() {
         var img_url = div.attr("data-img-url");
         var url = div.attr("data-url");
         var desc = div.text();
-        $(this).replaceWith('<a href='+url+'><img class="center" src='+img_url+' data-desc="' + desc + '" /></a>');
+        div.replaceWith('<a href='+url+'><img class="center" src='+img_url+' data-desc="' + desc + '" /></a>');
     }
     
     $(".description_link").live("click", function(e){
