@@ -12,6 +12,7 @@
 		<%= f.text_field :project_name, :placeholder => "Project/Website Name", :class => "add-field" %><br />
 		<%= f.text_field :project, :placeholder => "Url of screenshot or logo of project (300x200 pixels)", :class => "add-field" %><br />
 		<%= f.text_field :project_dest, :placeholder => "Url of project", :class => "add-field" %><br />
+		<%= f.text_area :project_desc, :placeholder => "Description of project. No longer than", :class => "add-field" %><br />
 	    <%= f.submit "Add yourself", :id => "add-button" %>
 	<% end %>
 

@@ -17,8 +17,9 @@
 	<h1 style="font-size 25px;margin-bottom:10px;">IMG Projects and Businesses</h1>
 	<% @users.each do |user| %>
 	    <div class="project-frame">
-		    <a href="<%= user.project_dest %>"><img class="center" src="<%= user.project %>" /></a>
-		    <div class="project-info">
+		    <a href="<%= user.project_dest %>"><img class="center" src="<%= user.project %>" data-desc="<%= user.project_desc %>" width="300px" height="200px" /></a>
+		    <a href="#" class="description_link" style="float:right;margin-right:10px;margin-bottom:10px;">Description</a>
+		    <div class="project-info" style="clear:both;">
 		        <div class="text"><b><%= user.project_name %></b> by </div>
 		        <div class="gravatar"><a href="<%= user.gravatar_dest %>"><img class="gravatar-image" title="<%= user.name %>" src="<%= user.gravatar %>" /></a></div>
 		    </div>

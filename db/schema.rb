@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110908231645) do
+ActiveRecord::Schema.define(:version => 20110914032202) do
 
   create_table "emails", :force => true do |t|
     t.string   "email"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20110908231645) do
     t.string   "project_dest"
     t.string   "project_name"
     t.string   "gravatar_dest"
+    t.text     "project_desc"
   end
 
 end
