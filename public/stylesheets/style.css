@@ -36,7 +36,8 @@ body, p, ol, ul, td {
 
 h1 {
     font-family: 'Buda', sans-serif;
-    color: #930325
+    color: #930325;
+    text-shadow: white 1px 1px 0px;
 }
 
 #header-background{

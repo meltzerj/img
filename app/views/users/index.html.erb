@@ -6,7 +6,7 @@
 <%= content_tag(:p, notice, :class => 'notice') if notice.present? %>
 <%= content_tag(:p, alert, :class => 'alert') if alert.present? %>
 
-<p style="font-size:20px;float:left;margin-right:10px;color:#004782;"><b>Sign up here:</b></p>
+<p style="font-size:20px;float:left;margin-right:10px;color:#004782;text-shadow: white 1px 1px 0px;"><b>Sign up here:</b></p>
 
 <%= form_for @email, :url => emails_path, :class => "email-form" do |f| %>
 	<%= f.text_field :email, :placeholder => "email address", :class => "field" %>
@@ -18,7 +18,7 @@
 	<% @users.each do |user| %>
 	    <div class="project-frame">
 		    <a href="<%= user.project_dest %>"><img class="center" src="<%= user.project %>" /></a>
-		    <div class="desc-text center" style="background: white url(../images/bg.png) repeat top left;color:#8b8b8b;text-shadow: white 1px 1px 0px;height:190px;width:290px;padding:5px;display:none;"><%= user.project_desc %></div>
+		    <div class="desc-text center" style="background: white url(../images/bg2.png) repeat top left;color:#8b8b8b;text-shadow: white 1px 1px 0px;height:190px;width:290px;padding:5px;display:none;"><%= user.project_desc %></div>
 		    <a href="#" class="description_link" style="float:right;margin-right:10px;margin-bottom:10px;">Description</a>
 		    <div class="project-info" style="clear:both;">
 		        <div class="text"><b><%= user.project_name %></b> by </div>
